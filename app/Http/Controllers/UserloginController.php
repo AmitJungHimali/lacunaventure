@@ -54,7 +54,7 @@ class UserloginController extends Controller
             'recoveryEmail'=>['required','email']
         ]);
         if ($validator->fails()) {
-            return response()->json($validation->errors() , 422);
+            return response()->json($validator->errors() , 422);
         }
         $userdetails['firstName']=$request->firstName;
         $userdetails['middleName']=$request->middleName;

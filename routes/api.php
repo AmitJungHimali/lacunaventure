@@ -19,3 +19,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::post('registration','App\Http\Controllers\UserloginController@store');
+
+Route::get('workshop','App\Http\Controllers\WorkshopController@index');   
+Route::post('workshop','App\Http\Controllers\WorkshopController@store');   
+Route::get('workshop/{id}','App\Http\Controllers\WorkshopController@show');   
+Route::put('workshop/{id}','App\Http\Controllers\WorkshopController@update'); 
+Route::delete('workshop/{id}','App\Http\Controllers\WorkshopController@destroy');       
